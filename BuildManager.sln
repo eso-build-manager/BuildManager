@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildManager.Client", "BuildManager.Client\BuildManager.Client.csproj", "{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildManager.Client", "BuildManager.Client\BuildManager.Client.csproj", "{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "BuildManager.Web", "BuildManager.Web\BuildManager.Web.njsproj", "{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
