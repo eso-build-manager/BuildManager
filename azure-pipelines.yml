@@ -6,29 +6,25 @@
 trigger:
 - main
 
-pool:
-  vmImage: 'windows-latest'
-
+name: Keep clone up to date
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
-
-steps:
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+  REMOTE_ADDR: 'https://github.com/AlekWithK/BuildManager'
+stages:
+  - stage: running_git_commands
+    displayName: running_git_commands
+    jobs:
+      - job: initiate
+        displayName: initiate
+        continueOnError: false
+        steps:
+        - checkout: self
+          clean: true
+          persistCredentials: true
+          displayName: run_commands
+        - bash: | 
+            git checkout main
+            git remote add repoGithub $(REMOTE_ADDR)
+            git fetch BuildManager main
+            git reset --hard BuildManager/main
+            git pull --rebase BuildManager main
+            git push -f origin
