@@ -27,6 +27,7 @@ jobs:
         git clone $GIT_CMD_REPOSITORY
     - name: Copy files from git repro to azure repro
       run: |
+        rm -rf /BuildManager
         yes | cp -rf BuildManager/* BuildManager/
     - name: Configure user in azure repro
       run: |
