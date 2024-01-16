@@ -10,6 +10,7 @@ on:
         - '!BuildManager.Web/*'
         - '!BuildManager.Addon/*'
         - 'BuildManager.Client/*'
+        - '.github/workflows/BuildManager.Client.Pipeline.yml'
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
