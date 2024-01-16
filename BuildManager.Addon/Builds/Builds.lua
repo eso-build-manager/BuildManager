@@ -18,10 +18,9 @@ function BD.Init()
 end
 
 function BD.Testing()
-    d(GetItemLinkItemId(BD.savedVariables.itemString))
-    d(GetItemLinkItemStyle(BD.savedVariables.itemString))
-    d(GetItemLinkItemType(BD.savedVariables.itemString))
-    d(GetItemLinkItemUseType(BD.savedVariables.itemString))
+    --d(GetItemLinkSetInfo(BD.savedVariables.itemString))
+    --d(GetSlotItemLink(3))
+    
 end
 
 ----------------------------
