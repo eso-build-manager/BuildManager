@@ -10,6 +10,7 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		BuildManagerClientConfig|Any CPU = BuildManagerClientConfig|Any CPU
+		BuildManagerWebConfig|Any CPU = BuildManagerWebConfig|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
@@ -17,6 +18,9 @@ Global
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.BuildManagerClientConfig|Any CPU.ActiveCfg = BuildManagerClientConfig|Any CPU
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.BuildManagerClientConfig|Any CPU.Build.0 = BuildManagerClientConfig|Any CPU
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.BuildManagerClientConfig|Any CPU.Deploy.0 = BuildManagerClientConfig|Any CPU
+		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.BuildManagerWebConfig|Any CPU.ActiveCfg = BuildManagerClientConfig|Any CPU
+		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.BuildManagerWebConfig|Any CPU.Build.0 = BuildManagerClientConfig|Any CPU
+		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.BuildManagerWebConfig|Any CPU.Deploy.0 = BuildManagerClientConfig|Any CPU
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -24,6 +28,8 @@ Global
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}.BuildManagerClientConfig|Any CPU.ActiveCfg = BuildManagerClientConfig|Any CPU
+		{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}.BuildManagerWebConfig|Any CPU.ActiveCfg = BuildManagerWebConfig|Any CPU
+		{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}.BuildManagerWebConfig|Any CPU.Build.0 = BuildManagerWebConfig|Any CPU
 		{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46DE2BE1-CFEF-4A0E-AB3F-DFA5821E5FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -309,3 +309,5 @@ dist/**/*
 
 # ignore yarn.lock
 yarn.lock
+*.map
+*.js
