@@ -11,10 +11,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup environment variables
       run: |
-        echo ::set-env name=AZUREPAT::${{ secrets.AZUREPAT }}
-        echo ::set-env name=AZUSERNAME::${{ secrets.AZUSERNAME }}
-        echo ::set-env name=AZUSER_EMAIL::${{ secrets.AZUSER_EMAIL }}
-        echo ::set-env name=AZORG::${{ secrets.AZORG }}
+        echo "name=AZUREPAT::${{ secrets.AZUREPAT }} >> GITHUB_ENV
+        echo "name=AZUSERNAME::${{ secrets.AZUSERNAME }} >> GITHUB_ENV
+        echo "name=AZUSER_EMAIL::${{ secrets.AZUSER_EMAIL }} >> GITHUB_ENV
+        echo "name=AZORG::${{ secrets.AZORG }} >> $GITHUB_ENV
     - name: Git clone repo
       run: |
         git clone https://github.com/AlekWithK/BuildManager
