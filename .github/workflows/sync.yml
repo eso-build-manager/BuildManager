@@ -24,6 +24,7 @@ jobs:
       run: |
         cd ..
         GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/_git/BuildManager" 
+        rm -rf $GIT_CMD_REPOSITORY
         git clone $GIT_CMD_REPOSITORY
     - name: Copy files from git repro to azure repro
       run: |
