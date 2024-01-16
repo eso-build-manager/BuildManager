@@ -9,6 +9,12 @@ on:
   pull_request:
     branches: [ "main" ]
 
+  paths:
+    include:
+      - BuildManager.Client/*
+    exclude:
+      - BuildManager.Web/*
+
 jobs:
   build:
 
