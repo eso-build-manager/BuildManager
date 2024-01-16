@@ -23,11 +23,14 @@ jobs:
     - name: Clone to Azure DevOps Repo
       run: |
         cd ..
+        echo ls
         GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/_git/BuildManager" 
+        echo ls
         rm -rf $GIT_CMD_REPOSITORY
         git clone $GIT_CMD_REPOSITORY
     - name: Copy files from git repro to azure repro
       run: |
+        echo ls
         rm -rf /BuildManager
         yes | cp -rf BuildManager/* BuildManager/
     - name: Configure user in azure repro
