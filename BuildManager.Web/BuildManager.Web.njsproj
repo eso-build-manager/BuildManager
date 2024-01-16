@@ -30,6 +30,10 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'BuildManagerClientConfig' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\BuildManagerClientConfig\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="server.ts" />
     <Content Include="tsconfig.json" />
