@@ -1,20 +1,18 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET
+name: BuildManager.Client.Pipeline
 
-on:
+on: 
   push:
+    paths:
+      # Use "!" to exclude a path, we will need to exclude additional paths as additional projects are created. 
+        - '!BuildManager.Web/*'
+        - '!BuildManager.Addon/*'
+        - 'BuildManager.Client/*'
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
-  paths:
-    include:
-      - BuildManager.Client/*
-    exclude:
-      - BuildManager.Web/*
-
 jobs:
   build:
 
