@@ -25,11 +25,22 @@ function BD.AddonMenu()
             width = "full",
         },
         {
-			type    = "checkbox",
-			name    = "Testing",
-			tooltip = "Testing",
+			type    = "editbox",
+			name    = BD_MENU_EDITBOX_NAME,
+			tooltip = BD_MENU_EDITBOX_TT,
 			default = false,
+            isExtraWide = true,
+            isMultiline = true,
+
+            getFunc = function() return BD.savedVariables.itemString end,
+            setFunc = function(value) BD.savedVariables.itemString = value end,
 		},
+        {
+            type = "button",
+            name = BD_BUTTTON_CONVERT_NAME,
+            tooltip = BD_BUTTTON_CONVERT_TT,
+            func = function(value) BD.Testing() end,
+        }
     }
 
     LAM = LibAddonMenu2

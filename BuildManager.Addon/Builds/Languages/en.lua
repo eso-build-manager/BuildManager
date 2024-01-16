@@ -17,3 +17,9 @@ BD_DISPLAY_NAME = "Builds"
 
 BD_MENU_DESCRIPTION = "TBD"
 BD_MENU_OPTIONS_HEADER = "ALSO TBD"
+
+BD_MENU_EDITBOX_NAME = "Item String"
+BD_MENU_EDITBOX_TT = "Input item string for converstion to item ID"
+
+BD_BUTTTON_CONVERT_NAME = "Convert"
+BD_BUTTTON_CONVERT_TT = "Convert item string to item ID"
