@@ -36,5 +36,8 @@ jobs:
         cache: 'npm'
         cache-dependency-path: BuildManager.Web/package-lock.json
     - run: npm install
+      working-directory: BuildManager.Web/
     - run: npm run build --if-present
+      working-directory: BuildManager.Web/      
     - run: npm test
+      working-directory: BuildManager.Web/
