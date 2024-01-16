@@ -23,7 +23,7 @@ jobs:
     - name: Clone to Azure DevOps Repo
       run: |
         cd ..
-        GIT_CMD_REPOSITORY="https://dev.azure.com/bridgerwinter/_git/BuildManager" 
+        GIT_CMD_REPOSITORY="https://$AZUSERNAME:$AZUREPAT@dev.azure.com/$AZORG/BuildManager/_git/BuildManager" 
         git clone $GIT_CMD_REPOSITORY
     - name: Copy files from git repro to azure repro
       run: |
