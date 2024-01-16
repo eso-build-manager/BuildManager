@@ -4,7 +4,12 @@
 name: Node.js CI
 
 on:
-  push:
+  push:    
+    paths:
+      # Use "!" to exclude a path, we will need to exclude additional paths as additional projects are created. 
+      - '!BuildManager.Web/*'
+      - '!BuildManager.Addon/*'
+      - 'BuildManager.Client/*'
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
