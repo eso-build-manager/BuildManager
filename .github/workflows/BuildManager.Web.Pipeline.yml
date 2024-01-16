@@ -7,8 +7,9 @@ on:
   push:    
     paths:
       # Use "!" to exclude a path, we will need to exclude additional paths as additional projects are created. 
+      # If the pipeline isn't triggering make sure that the workflows include is actually checking the correct pipeline. 
       - 'BuildManager.Web/*'
-      - '.github/workflows/BuildManager.Client.Pipeline.yml'
+      - '.github/workflows/BuildManager.Web.Pipeline.yml'
       - '!BuildManager.Addon/*'
       - '!BuildManager.Client/*'
     branches: [ "main" ]
