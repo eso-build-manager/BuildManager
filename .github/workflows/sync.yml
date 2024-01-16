@@ -18,7 +18,7 @@ jobs:
     - name: Git clone repo
       run: |
         git clone https://github.com/AlekWithK/BuildManager
-        cd reponame
+        cd BuildManager
         rm -rf .git
     - name: Clone to Azure DevOps Repo
       run: |
