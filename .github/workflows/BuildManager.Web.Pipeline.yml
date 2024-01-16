@@ -7,9 +7,9 @@ on:
   push:    
     paths:
       # Use "!" to exclude a path, we will need to exclude additional paths as additional projects are created. 
-      - '!BuildManager.Web/*'
+      - 'BuildManager.Web/*'
       - '!BuildManager.Addon/*'
-      - 'BuildManager.Client/*'
+      - '!BuildManager.Client/*'
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
