@@ -8,6 +8,7 @@ on:
     paths:
       # Use "!" to exclude a path, we will need to exclude additional paths as additional projects are created. 
       - 'BuildManager.Web/*'
+      - '.github/workflows/BuildManager.Client.Pipeline.yml'
       - '!BuildManager.Addon/*'
       - '!BuildManager.Client/*'
     branches: [ "main" ]
