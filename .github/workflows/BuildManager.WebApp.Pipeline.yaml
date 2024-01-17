@@ -5,8 +5,6 @@ name: .NET
 
 on:
   push:
-    paths:
-      - '!BuildManager.Client/*'
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
