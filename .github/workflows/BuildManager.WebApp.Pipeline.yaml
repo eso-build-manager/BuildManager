@@ -5,10 +5,6 @@ name: .NET
 
 on:
   push:
-    paths:
-      - '.github/workflows/BuildManager.WebApp.Pipeline.yml'
-      - '!BuildManager.Addon/*'
-      - '!BuildManager.Client/*'
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
