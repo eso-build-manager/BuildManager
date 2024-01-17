@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildManager.Client", "BuildManager.Client\BuildManager.Client.csproj", "{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildManager.WebApp.Server", "BuildManager.WebApp\BuildManager.WebApp.Server\BuildManager.WebApp.Server.csproj", "{18339AD7-54B3-4F1D-9FE1-7CC17DB879C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildManager.WebApp.Server", "BuildManager.WebApp\BuildManager.WebApp.Server\BuildManager.WebApp.Server.csproj", "{18339AD7-54B3-4F1D-9FE1-7CC17DB879C4}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "BuildManager.WebApp.Client", "BuildManager.WebApp\buildmanager.webapp.client\BuildManager.WebApp.Client.esproj", "{7F1BFB48-1BC9-415A-A72C-CAE6F7946D50}"
 EndProject
@@ -17,16 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.BuildManager.WebApp|Any CPU.ActiveCfg = BuildManager.WebApp|Any CPU
-		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.BuildManagerClientConfig|Any CPU.ActiveCfg = BuildManagerClientConfig|Any CPU
-		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.BuildManagerClientConfig|Any CPU.Build.0 = BuildManagerClientConfig|Any CPU
-		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.BuildManagerClientConfig|Any CPU.Deploy.0 = BuildManagerClientConfig|Any CPU
-		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C71D6A16-AA09-46CA-9D8C-F76C29C9D3F4}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{18339AD7-54B3-4F1D-9FE1-7CC17DB879C4}.BuildManager.WebApp|Any CPU.ActiveCfg = BuildManager.WebApp|Any CPU
 		{18339AD7-54B3-4F1D-9FE1-7CC17DB879C4}.BuildManager.WebApp|Any CPU.Build.0 = BuildManager.WebApp|Any CPU
 		{18339AD7-54B3-4F1D-9FE1-7CC17DB879C4}.BuildManagerClientConfig|Any CPU.ActiveCfg = Debug|Any CPU
