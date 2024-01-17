@@ -38,6 +38,10 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\BuildManagerWebConfig\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'BuildManager.WebApp' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\BuildManager.WebApp\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="server.ts" />
     <Content Include="tsconfig.json" />
