@@ -6,7 +6,6 @@ name: .NET
 on:
   push:
     paths:
-      - 'BuildManager.WebApp/*'
       - '.github/workflows/BuildManager.WebApp.Pipeline.yml'
       - '!BuildManager.Addon/*'
       - '!BuildManager.Client/*'
