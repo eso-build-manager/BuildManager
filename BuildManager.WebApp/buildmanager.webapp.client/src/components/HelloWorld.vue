@@ -2,7 +2,16 @@
     <div class="weather-component">
         <h1>Weather forecast</h1>
         <p>This component demonstrates fetching data from the server.</p>
-
+        <div>
+            <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
+                <b-dropdown-item>First Action</b-dropdown-item>
+                <b-dropdown-item>Second Action</b-dropdown-item>
+                <b-dropdown-item>Third Action</b-dropdown-item>
+                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-item active>Active action</b-dropdown-item>
+                <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+            </b-dropdown>
+        </div>
         <div v-if="loading" class="loading">
             Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationvue">https://aka.ms/jspsintegrationvue</a> for more details.
         </div>
