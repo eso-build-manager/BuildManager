@@ -28,7 +28,10 @@ def process(path):
     # F-strings don't work here for whatever reason
     setTable.itemSlots = '{' + setTable.itemSlots + '}'
     setTable.itemSlots = setTable.itemSlots.str.replace(" ", "*")
-    setTable.setId = '[' + setTable.setId.astype(str)       
+    setTable.setId = '[' + setTable.setId.astype(str)     
+    
+    # Regex to clean up tooltips
+    setTable.setBonusDesc = setTable.setBonusDesc.apply(lambda x: re.sub(r'Adds \d+-(\d+)', r'Adds \1', str(x)))
         
     # Save processed set data
     try:
@@ -47,6 +50,7 @@ def process(path):
 
 if __name__ == "__main__":
     import os
+    import re
     import sys
     import pandas as pd
     
