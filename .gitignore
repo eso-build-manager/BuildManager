@@ -271,7 +271,6 @@ __pycache__/
 lib-cov
 *.seed
 *.log
-*.csv
 *.dat
 *.out
 *.pid
