@@ -2,8 +2,6 @@
 SET ANSI_NULLS ON
 GO
 
-SET QUOTED_IDENTIFIER ON
-GO
 create schema [Set]
 CREATE TABLE [Set].[SetList](
 	[SetId] [smallint] NOT NULL,
