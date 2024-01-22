@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildManager.Library", "Bui
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BuildManager.SQL", "BuildManager.SQL\BuildManager.SQL.sqlproj", "{A7347FB0-718F-4F20-BFDC-7C9CF6149650}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateRestAPIClientServices", "GenerateRestAPIClientServices\GenerateRestAPIClientServices.csproj", "{7984AE72-5045-4AAE-9A9B-4D7B24CC776E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		BuildManager.WebApp|Any CPU = BuildManager.WebApp|Any CPU
@@ -55,12 +57,19 @@ Global
 		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7984AE72-5045-4AAE-9A9B-4D7B24CC776E}.BuildManager.WebApp|Any CPU.ActiveCfg = Debug|Any CPU
+		{7984AE72-5045-4AAE-9A9B-4D7B24CC776E}.BuildManager.WebApp|Any CPU.Build.0 = Debug|Any CPU
+		{7984AE72-5045-4AAE-9A9B-4D7B24CC776E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7984AE72-5045-4AAE-9A9B-4D7B24CC776E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7984AE72-5045-4AAE-9A9B-4D7B24CC776E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7984AE72-5045-4AAE-9A9B-4D7B24CC776E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5D5F16B4-3DEF-45D0-903A-602F49671B20} = {0605A98B-64C0-47E7-A08B-D4F996017490}
+		{7984AE72-5045-4AAE-9A9B-4D7B24CC776E} = {0605A98B-64C0-47E7-A08B-D4F996017490}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C05F5BD8-4BD0-4C02-91D8-9C2A3429328D}
