@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseSetListUtility", "Pars
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildManager.Library", "BuildManager.Library\BuildManager.Library.csproj", "{B9322984-8E85-4507-80A2-C8BEAAA017B7}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BuildManager.SQL", "BuildManager.SQL\BuildManager.SQL.sqlproj", "{A7347FB0-718F-4F20-BFDC-7C9CF6149650}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		BuildManager.WebApp|Any CPU = BuildManager.WebApp|Any CPU
@@ -47,6 +49,15 @@ Global
 		{B9322984-8E85-4507-80A2-C8BEAAA017B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9322984-8E85-4507-80A2-C8BEAAA017B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9322984-8E85-4507-80A2-C8BEAAA017B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.BuildManager.WebApp|Any CPU.ActiveCfg = Release|Any CPU
+		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.BuildManager.WebApp|Any CPU.Build.0 = Release|Any CPU
+		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.BuildManager.WebApp|Any CPU.Deploy.0 = Release|Any CPU
+		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7347FB0-718F-4F20-BFDC-7C9CF6149650}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

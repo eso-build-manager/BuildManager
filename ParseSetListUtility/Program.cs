@@ -39,11 +39,11 @@ public class Program
         foreach (var weight in weights) {
             foreach (var type in armorTypes)
             {
-                DatabaseColumns.Add($"Has{weight}{type} bit,");
+                DatabaseColumns.Add($"\"Has{weight}{type}\" bit,");
             }
         }
         foreach (var type in otherEquipables) {
-            DatabaseColumns.Add($"Has{type} bit,");
+            DatabaseColumns.Add($"\"Has{type}\" bit,");
         }
     
         StringBuilder sb = new StringBuilder();
