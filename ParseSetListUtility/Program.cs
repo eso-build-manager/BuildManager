@@ -13,7 +13,7 @@ public class Program
     {
         string workingDirectory = Environment.CurrentDirectory;
         string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
-        string setlistcsv = $"{projectDirectory}\\BuildManager.Scripts\\noHeadingsProcessedSetSummaries.csv";
+        string setlistcsv = $"{projectDirectory}\\BuildManager.Scripts\\noHeadingsProcessedSetSummaries.txt";
 
         using (var reader = new StreamReader(setlistcsv))
         {
@@ -36,7 +36,7 @@ public class Program
     public static async Task InsertSetDetails(string setDetails)
     {
         // you shouldn't name variables acronyms, but i don't want to type that over and over again. sdl = setDetailsList
-        var sdl = setDetails.Split(",");
+        var sdl = setDetails.Split("*").Where(p => p != "").ToArray();
         SetList setList = new SetList();
         setList.SetId = Convert.ToInt16(sdl[0]);
         setList.SetName = sdl[1];
@@ -45,7 +45,7 @@ public class Program
         setList.SetMaxEquipCount = Convert.ToByte(sdl[4]);
         setList.SetBonusCount = Convert.ToByte(sdl[5]);
         setList.SetBonusDescription = sdl[6];
-        await ApiService.CreateSetList(setList);
+        //await ApiService.CreateSetList(setList);
 
     }
 
@@ -151,6 +151,6 @@ public class Program
 
     public static async Task InsertSetUsableItems(SetUsableItemSlots usableItems)
     {
-        await ApiService.CreateSetUsableItemSlots(usableItems);
+       // await ApiService.CreateSetUsableItemSlots(usableItems);
     }
 }
