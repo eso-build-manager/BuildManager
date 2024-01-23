@@ -1,7 +1,6 @@
 ﻿using BuildManager.Library.DataBaseModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Data.Entity;
 using EntityState = Microsoft.EntityFrameworkCore.EntityState;
 
 namespace BuildManager.WebApp.Server.API.Controllers

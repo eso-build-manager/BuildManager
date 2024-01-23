@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BuildManager.Library\BuildManager.Library.csproj" />
+  </ItemGroup>
+
 </Project>

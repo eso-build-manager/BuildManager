@@ -11,6 +11,7 @@ public partial class BuildManagerContext : DbContext
     public BuildManagerContext(DbContextOptions<BuildManagerContext> options)
         : base(options)
     {
+        Database.EnsureCreated();
     }
 
     public virtual DbSet<SetList> SetList { get; set; }
