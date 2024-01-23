@@ -25,7 +25,7 @@ public class Program
                 var fullSetDetails = item.Split("{");
                 var setDetails = fullSetDetails[0].Substring(0, fullSetDetails[0].Length - 1);
                 var usableItems = fullSetDetails[1].Substring(0, fullSetDetails[1].Length - 5);
-                var setId = Convert.ToInt16(setDetails[0]);
+                var setId = Convert.ToInt16(setDetails.Split("*")[0]);
                 await InsertSetDetails(setDetails);
                 var suits = DetermineSetUsableItems(usableItems, setId);
                 await InsertSetUsableItems(suits);
@@ -47,7 +47,7 @@ public class Program
         setList.SetBonusCount = Convert.ToByte(sdl[5]);
         setList.SetBonusDescription = sdl[6];
         var response = await ApiService.CreateSetList(setList);
-        Console.WriteLine(response.StatusCode + " " + setList.SetName);
+        //Console.WriteLine(response.StatusCode + " " + setList.SetName);
 
     }
 
@@ -147,12 +147,59 @@ public class Program
                 }
             }
         }
+        if (hasWeapons)
+        {
+            if (hasAllWeapons)
+            {
+                suits.HasAxe = true;
+                suits.HasDagger = true;
+                suits.HasSword = true;
+                suits.HasMace = true;
+
+                suits.HasFrost = true;
+                suits.HasFlame = true;
+                suits.HasLightning = true;
+                suits.HasResto = true;
+
+                suits.HasMaul = true;
+                suits.HasBattleaxe = true;
+                suits.HasGreatsword = true;
+
+            }
+            else
+            {
+                var elements = equipment.Where(p => p.Contains("Weapons")).FirstOrDefault().Split("(")[1].Split('*');
+                foreach (var equipmentType in elements)
+                {
+                    Type t = suits.GetType();
+                    PropertyInfo? prop = t.GetProperty($"Has{equipmentType}", bindingAttributes);
+                    if (prop != null)
+                    {
+                        prop.SetValue(suits, true, null);
+                    }
+                }
+            }
+        }
+        if (hasShield)
+        {
+            suits.HasShield = true;
+        }
+        if (hasNecklace)
+        {
+            suits.HasNecklace = true;
+        }
+        if (hasRing)
+        {
+            suits.HasRing = true;
+        }
         return suits;
     }
 
 
     public static async Task InsertSetUsableItems(SetUsableItemSlots usableItems)
     {
-       await ApiService.CreateSetUsableItemSlots(usableItems);
+       var response = await ApiService.CreateSetUsableItemSlots(usableItems);
+       Console.WriteLine(response.StatusCode + $" SetId: {usableItems.SetId}");
+
     }
 }
