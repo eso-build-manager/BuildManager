@@ -26,6 +26,7 @@ public class Program
                 var setDetails = fullSetDetails[0].Substring(0, fullSetDetails[0].Length - 1);
                 var usableItems = fullSetDetails[1].Substring(0, fullSetDetails[1].Length - 5);
                 var setId = Convert.ToInt16(setDetails.Split("*")[0]);
+
                 await InsertSetDetails(setDetails);
                 var suits = DetermineSetUsableItems(usableItems, setId);
                 await InsertSetUsableItems(suits);
@@ -47,11 +48,11 @@ public class Program
         setList.SetBonusCount = Convert.ToByte(sdl[5]);
         setList.SetBonusDescription = sdl[6];
         var response = await ApiService.CreateSetList(setList);
-        //Console.WriteLine(response.StatusCode + " " + setList.SetName);
+        Console.WriteLine(response.StatusCode + " " + setList.SetName);
 
     }
 
-    // to be extra we could replace this entire method with some reflection shenangians, but I'd say that that's overengineering. 
+    // Duplicate code could be cleaned up into generic methods.
     public static SetUsableItemSlots DetermineSetUsableItems(string usableItems, short setId)
     {
         SetUsableItemSlots suits = new SetUsableItemSlots();
@@ -200,6 +201,5 @@ public class Program
     {
        var response = await ApiService.CreateSetUsableItemSlots(usableItems);
        Console.WriteLine(response.StatusCode + $" SetId: {usableItems.SetId}");
-
     }
 }
