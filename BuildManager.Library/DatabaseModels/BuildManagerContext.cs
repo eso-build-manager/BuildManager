@@ -42,7 +42,7 @@ public partial class BuildManagerContext : DbContext
 
         modelBuilder.Entity<SetUsableItemSlots>(entity =>
         {
-            entity.HasKey(e => e.SetUsableItemSlotId);
+            entity.HasKey(e => e.SetUsableItemSlotsId);
 
             entity.ToTable("SetUsableItemSlots", "Set");
 

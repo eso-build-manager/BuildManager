@@ -15,7 +15,7 @@ namespace Buildmanager.Library.Services
 			return result;
 		}
 
-		public static async Task<SetList> GetSetList(int id)
+		public static async Task<SetList> GetSetList(short id)
 		{
 			var url = Constants.SetListUrl + id.ToString();
 			string result = await Constants.GetClient().GetStringAsync(url);
@@ -71,7 +71,7 @@ namespace Buildmanager.Library.Services
 
 		public static async Task<HttpResponseMessage> UpdateSetUsableItemSlots(SetUsableItemSlots setUsableItemSlots)
 		{
-			var url = Constants.SetUsableItemSlotsUrl + setUsableItemSlots.SetUsableItemSlotId.ToString();
+			var url = Constants.SetUsableItemSlotsUrl + setUsableItemSlots.SetUsableItemSlotsId.ToString();
 			string jsonChore = JsonConvert.SerializeObject(setUsableItemSlots);
 			StringContent httpContent = new StringContent(jsonChore, Encoding.UTF8, "application/json");
 			HttpResponseMessage result = await Constants.GetClient().PutAsync(url,httpContent);
@@ -80,7 +80,7 @@ namespace Buildmanager.Library.Services
 
 		public static async Task<HttpResponseMessage> DeleteSetUsableItemSlots(SetUsableItemSlots setUsableItemSlots)
 		{
-			 var url = Constants.SetUsableItemSlotsUrl + setUsableItemSlots.SetUsableItemSlotId.ToString();
+			 var url = Constants.SetUsableItemSlotsUrl + setUsableItemSlots.SetUsableItemSlotsId.ToString();
 			HttpResponseMessage result = await Constants.GetClient().DeleteAsync(url);
 			return result;
 		}

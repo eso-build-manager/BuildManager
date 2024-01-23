@@ -14,9 +14,9 @@ namespace Buildmanager.Library.Services
         {
             return client;
         }
-        public static string RestUrl = "http://localhost:5096/api/";
+        public static string RestUrl = "http://localhost:5083/api/";
 
-		public static string SetListUrl = string.Concat(RestUrl,"SetLists");
-		public static string SetUsableItemSlotsUrl = string.Concat(RestUrl,"SetUsableItemSlotss");
+		public static string SetListUrl = string.Concat(RestUrl,"SetList");
+		public static string SetUsableItemSlotsUrl = string.Concat(RestUrl,"SetUsableItemSlots");
 	}
 }

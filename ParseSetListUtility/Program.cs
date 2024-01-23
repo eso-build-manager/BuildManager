@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 public class Program
 {
-    public static void Main()
+    public static async Task Main()
     {
         string workingDirectory = Environment.CurrentDirectory;
         string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
@@ -26,11 +26,12 @@ public class Program
                 var setDetails = fullSetDetails[0].Substring(0, fullSetDetails[0].Length - 1);
                 var usableItems = fullSetDetails[1].Substring(0, fullSetDetails[1].Length - 5);
                 var setId = Convert.ToInt16(setDetails[0]);
-                InsertSetDetails(setDetails).ConfigureAwait(false);
+                await InsertSetDetails(setDetails);
                 var suits = DetermineSetUsableItems(usableItems, setId);
-                InsertSetUsableItems(suits).ConfigureAwait(false);
+                await InsertSetUsableItems(suits);
             }
         }
+        Console.ReadKey();
     }
 
     public static async Task InsertSetDetails(string setDetails)
@@ -45,7 +46,8 @@ public class Program
         setList.SetMaxEquipCount = Convert.ToByte(sdl[4]);
         setList.SetBonusCount = Convert.ToByte(sdl[5]);
         setList.SetBonusDescription = sdl[6];
-        //await ApiService.CreateSetList(setList);
+        var response = await ApiService.CreateSetList(setList);
+        Console.WriteLine(response.StatusCode + " " + setList.SetName);
 
     }
 
@@ -151,6 +153,6 @@ public class Program
 
     public static async Task InsertSetUsableItems(SetUsableItemSlots usableItems)
     {
-       // await ApiService.CreateSetUsableItemSlots(usableItems);
+       await ApiService.CreateSetUsableItemSlots(usableItems);
     }
 }

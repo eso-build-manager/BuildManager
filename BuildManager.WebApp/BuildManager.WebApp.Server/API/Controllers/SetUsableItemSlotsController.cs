@@ -50,7 +50,7 @@ namespace BuildManager.WebApp.Server.API.Controllers
             [HttpPut("{id}")]
             public async Task<IActionResult> PutSetUsableItemSlots(int id, SetUsableItemSlots SetUsableItemSlots)
             {
-                if (id != SetUsableItemSlots.SetUsableItemSlotId)
+                if (id != SetUsableItemSlots.SetUsableItemSlotsId)
                 {
                     return BadRequest();
                 }
@@ -92,7 +92,7 @@ namespace BuildManager.WebApp.Server.API.Controllers
                 }
                 catch (DbUpdateException)
                 {
-                    if (SetUsableItemSlotsExists(SetUsableItemSlots.SetUsableItemSlotId))
+                    if (SetUsableItemSlotsExists(SetUsableItemSlots.SetUsableItemSlotsId))
                     {
                         return Conflict();
                     }
@@ -102,7 +102,7 @@ namespace BuildManager.WebApp.Server.API.Controllers
                     }
                 }
 
-                return CreatedAtAction("GetSetUsableItemSlots", new { id = SetUsableItemSlots.SetUsableItemSlotId }, SetUsableItemSlots);
+                return CreatedAtAction("GetSetUsableItemSlots", new { id = SetUsableItemSlots.SetUsableItemSlotsId }, SetUsableItemSlots);
             }
 
             // DELETE: api/SetUsableItemSlotss/5
@@ -127,7 +127,7 @@ namespace BuildManager.WebApp.Server.API.Controllers
 
             private bool SetUsableItemSlotsExists(int id)
             {
-                return (_context.SetUsableItemSlots?.Any(e => e.SetUsableItemSlotId == id)).GetValueOrDefault();
+                return (_context.SetUsableItemSlots?.Any(e => e.SetUsableItemSlotsId == id)).GetValueOrDefault();
             }
         }
 

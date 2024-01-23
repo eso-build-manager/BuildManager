@@ -1,6 +1,7 @@
 ﻿using BuildManager.Library.DataBaseModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using EntityState = Microsoft.EntityFrameworkCore.EntityState;
 
 namespace BuildManager.WebApp.Server.API.Controllers
@@ -29,7 +30,7 @@ namespace BuildManager.WebApp.Server.API.Controllers
 
             // GET: api/SetLists/5
             [HttpGet("{id}")]
-            public async Task<ActionResult<SetList>> GetSetList(int id)
+            public async Task<ActionResult<SetList>> GetSetList(short id)
             {
                 if (_context.SetList == null)
                 {
@@ -48,7 +49,7 @@ namespace BuildManager.WebApp.Server.API.Controllers
             // PUT: api/SetLists/5
             // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
             [HttpPut("{id}")]
-            public async Task<IActionResult> PutSetList(int id, SetList SetList)
+            public async Task<IActionResult> PutSetList(short id, SetList SetList)
             {
                 if (id != SetList.SetId)
                 {
@@ -107,7 +108,7 @@ namespace BuildManager.WebApp.Server.API.Controllers
 
             // DELETE: api/SetLists/5
             [HttpDelete("{id}")]
-            public async Task<IActionResult> DeleteSetList(int id)
+            public async Task<IActionResult> DeleteSetList(short id)
             {
                 if (_context.SetList == null)
                 {
@@ -125,7 +126,7 @@ namespace BuildManager.WebApp.Server.API.Controllers
                 return NoContent();
             }
 
-            private bool SetListExists(int id)
+            private bool SetListExists(short id)
             {
                 return (_context.SetList?.Any(e => e.SetId == id)).GetValueOrDefault();
             }

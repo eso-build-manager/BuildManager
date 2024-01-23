@@ -28,7 +28,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [Set].[SetUsableItemSlots](
-	[SetUsableItemSlotId] [int] IDENTITY(1,1) NOT NULL,
+	[SetUsableItemSlotsId] [int] IDENTITY(1,1) NOT NULL,
 	[SetId] [smallint] NULL,
 	[HasMediumHead] [bit] NULL,
 	[HasMediumShoulder] [bit] NULL,
@@ -64,7 +64,7 @@ CREATE TABLE [Set].[SetUsableItemSlots](
 	[HasShield] [bit] NULL,
  CONSTRAINT [PK_SetUsableItemSlots] PRIMARY KEY CLUSTERED 
 (
-	[SetUsableItemSlotId] ASC
+	[SetUsableItemSlotsId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO

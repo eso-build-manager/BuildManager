@@ -351,7 +351,7 @@ Current bonus: 0 Weapon and Spell Damage."*"{Medium(All)*Shield*Weapons(All)*Nec
 (4 items) Adds 129 Weapon and Spell Damage_x000D_
 (5 items) When you deal direct damage with a Blink, Charge, Leap, Teleport, or Pull ability, you consecrate the ground beneath you for 10 seconds and gain a damage shield that absorbs 1975 damage for 6 seconds. Every 2 seconds you and nearby group members in the area gain Minor Courage for 12 seconds. These effects can occur once every 20 seconds and the damage shield scales off the higher of your Weapon or Spell Damage."*"{Medium(All)*Shield*Weapons(All)*Neck*Ring}"*]
 [373*Crushing Wall*Trial*Maelstrom Arena*2*1*(2 items) Increases the damage Wall of Elements deals by 29-1250.*"{Weapons(Lightning*Frost*Flame)}"*]
-[691*Cryptcanon Vestments*Mythic**1*1*"(1 item) You can no longer cast Ultimate abilities. Instead, casting an Ultimate ability transfers your Ultimate resource to your living group members, divided equally among them._x000D_
+[691*Cryptcanon Vestments*Mythic*Fragment Leads*1*1*"(1 item) You can no longer cast Ultimate abilities. Instead, casting an Ultimate ability transfers your Ultimate resource to your living group members, divided equally among them. _x000D_
 _x000D_
 Gain Minor Heroism while you are in combat."*{Light(Chest)}*]
 [104*Curse Eater*PVP*Cyrodiil, Cropsford*5*4*"(2 items) Adds 1096 Maximum Magicka_x000D_
@@ -547,7 +547,7 @@ This effect does not work with beam or channeled effects."*"{Heavy(All)*Shield*W
 (5 items) When you deal direct damage, you have a 10% chance to create an area under the target that detonates after 1 second, applying Enervating Aura for 10 seconds to enemies within 5 meters. Enervating Aura lowers the Health Recovery, Magicka Recovery, and Stamina Recovery of enemy players by 3-129 per player hit. This effect can occur once every 15 seconds."*"{Heavy(All)*Shield*Weapons(All)*Neck*Ring}"*]
 [166*Engine Guardian*Monster*The Engine Guardian in Darkshade Caverns II, Maj al-Ragath*2*2*"(1 item) Adds 129 Health Recovery_x000D_
 (2 items) When you use an ability that costs resources, you have a 25% chance to summon a Dwemer automation to restore 12-550 Stamina or Magicka or 45-1955 Health to you every 0.5 seconds for 6 seconds. This effect can occur once every 10 seconds."*"{Light(Shoulder*Head)*Medium(Shoulder*Head)*Heavy(Shoulder*Head)}"*]
-[692*Esoteric Environment Greaves*Mythic**1*1*(1 item) While you are above 50% Stamina, reduce your direct damage taken by 50% and lose 968 Stamina whenever you take direct damage, up to once every 0.3 seconds.*{Heavy(Leg)}*]
+[692*Esoteric Environment Greaves*Mythic*Fragment Leads*1*1*(1 item) While you are above 50% Stamina, reduce your direct damage taken by 50% and lose 968 Stamina whenever you take direct damage, up to once every 0.3 seconds.*{Heavy(Leg)}*]
 [198*Essence Thief*Dungeon*Imperial City, White-Gold Tower*5*4*"(2 items) Adds 1096 Maximum Stamina_x000D_
 (3 items) Adds 1096 Maximum Stamina_x000D_
 (4 items) Adds 129 Weapon and Spell Damage_x000D_
@@ -2199,7 +2199,7 @@ _x000D_
 (5 items) When you resurrect an ally, you and your ally gain 6-258 Weapon and Spell Damage and 10% cost reduction to non-Ultimate abilities for 10 seconds."*"{Medium(All)*Light(All)*Heavy(All)*Shield*Weapons(All)*Neck*Ring}"*]
 [257*Velidreth*Monster*Velidreth in Cradle of Shadows, Urgarlag Chief-bane*2*2*"(1 item) Adds 129 Weapon and Spell Damage_x000D_
 (2 items) When you deal damage, you have a 20% chance to spawn 3 disease spores in front of you after 1 second that deal 1928 Disease damage to any enemy they hit. This effect can occur once every 8 seconds and scales off the higher of your Weapon or Spell Damage."*"{Light(Shoulder*Head)*Medium(Shoulder*Head)*Heavy(Shoulder*Head)}"*]
-[694*Velothi Ur-Mage's Amulet*Mythic**1*2*"(1 item) Adds 1650 Offensive Penetration_x000D_
+[694*Velothi Ur-Mage's Amulet*Mythic*Fragment Leads*1*2*"(1 item) Adds 1650 Offensive Penetration_x000D_
 (1 item) Increase your damage done to monsters by 15%, gain Minor Force at all times, increasing your Critical Damage done by 10%, and reduce your Light and Heavy Attack damage by 99%."*{Neck}*]
 [129*Vengeance Leech*PVP*Cyrodiil, Bruma*3*2*"(2 items) Adds 1206 Maximum Health_x000D_
 (3 items) When you kill an enemy, you heal for 64-2772 Health and restore 64-2772 Magicka and Stamina."*"{Shield*Weapons(All)*Neck*Ring}"*]

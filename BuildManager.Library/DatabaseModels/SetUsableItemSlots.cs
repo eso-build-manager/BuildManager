@@ -7,7 +7,7 @@ namespace BuildManager.Library.DataBaseModels;
 
 public partial class SetUsableItemSlots
 {
-    public int SetUsableItemSlotId { get; set; }
+    public int SetUsableItemSlotsId { get; set; }
 
     public short? SetId { get; set; }
 
