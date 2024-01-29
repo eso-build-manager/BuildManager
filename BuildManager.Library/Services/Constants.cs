@@ -18,5 +18,6 @@ namespace Buildmanager.Library.Services
 
 		public static string SetListUrl = string.Concat(RestUrl,"SetList");
 		public static string SetUsableItemSlotsUrl = string.Concat(RestUrl,"SetUsableItemSlots");
+		public static string SkillUrl = string.Concat(RestUrl,"Skill");
 	}
 }

@@ -4,16 +4,20 @@ using System.Reflection;
 using System.Text;
 using Buildmanager.Library.Services;
 using BuildManager.Library;
-using BuildManager.Library.DataBaseModels;
+using BuildManager.Library.DatabaseModels;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 public class Program
 {
-    public static async Task Main()
-    {
-        string workingDirectory = Environment.CurrentDirectory;
-        string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
-        string setlistcsv = $"{projectDirectory}\\BuildManager.Scripts\\noHeadingsProcessedSetSummaries.txt";
+	public static async Task Main()
+	{
+		_ = new ParseSkillUtility();
+    }
+	public static async Task StartParsingSkills()
+	{
+		string workingDirectory = Environment.CurrentDirectory;
+		string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
+		string setlistcsv = $"{projectDirectory}\\BuildManager.Scripts\\noHeadingsProcessedSetSummaries.txt";
 
         using (var reader = new StreamReader(setlistcsv))
         {
@@ -33,7 +37,8 @@ public class Program
             }
         }
         Console.ReadKey();
-    }
+ 
+	}
 
     public static async Task InsertSetDetails(string setDetails)
     {

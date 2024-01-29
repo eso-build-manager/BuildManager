@@ -1,7 +1,7 @@
-using BuildManager.Library.DataBaseModels;
+using BuildManager.Library.DatabaseModels;
 using Newtonsoft.Json;
 using System.Text;
-using Attribute = BuildManager.Library.DataBaseModels;
+using Attribute = BuildManager.Library.DatabaseModels;
 
 namespace Buildmanager.Library.Services
 {
@@ -81,6 +81,54 @@ namespace Buildmanager.Library.Services
 		public static async Task<HttpResponseMessage> DeleteSetUsableItemSlots(SetUsableItemSlots setUsableItemSlots)
 		{
 			 var url = Constants.SetUsableItemSlotsUrl + setUsableItemSlots.SetUsableItemSlotsId.ToString();
+			HttpResponseMessage result = await Constants.GetClient().DeleteAsync(url);
+			return result;
+		}
+
+		public static async Task<HttpResponseMessage> CreateSkill(Skill Skill)
+		{
+			try
+			{
+                string jsonChore = JsonConvert.SerializeObject(Skill);
+                StringContent httpContent = new StringContent(jsonChore, Encoding.UTF8, "application/json");
+                HttpResponseMessage result = await Constants.GetClient().PostAsync(Constants.SkillUrl, httpContent);
+                return result;
+            }
+			catch (Exception)
+			{
+
+				throw;
+			}
+
+		}
+
+		public static async Task<Skill> GetSkill(int id)
+		{
+			var url = Constants.SkillUrl + id.ToString();
+			string result = await Constants.GetClient().GetStringAsync(url);
+			var deserializedResult = JsonConvert.DeserializeObject<Skill>(result);
+			return deserializedResult;
+		}
+
+		public static async Task<List<Skill>> GetAllSkills()
+		{
+			string result = await Constants.GetClient().GetStringAsync(Constants.SkillUrl);
+			var deserializedResult = JsonConvert.DeserializeObject<List<Skill>>(result);
+			return deserializedResult;
+		}
+
+		public static async Task<HttpResponseMessage> UpdateSkill(Skill Skill)
+		{
+			var url = Constants.SkillUrl + Skill.SkillId.ToString();
+			string jsonChore = JsonConvert.SerializeObject(Skill);
+			StringContent httpContent = new StringContent(jsonChore, Encoding.UTF8, "application/json");
+			HttpResponseMessage result = await Constants.GetClient().PutAsync(url,httpContent);
+			return result;
+		}
+
+		public static async Task<HttpResponseMessage> DeleteSkill(Skill Skill)
+		{
+			 var url = Constants.SkillUrl + Skill.SkillId.ToString();
 			HttpResponseMessage result = await Constants.GetClient().DeleteAsync(url);
 			return result;
 		}

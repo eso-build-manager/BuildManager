@@ -1,4 +1,4 @@
-using BuildManager.Library.DataBaseModels;
+using BuildManager.Library.DatabaseModels;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

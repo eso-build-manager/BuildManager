@@ -1,4 +1,4 @@
-﻿using BuildManager.Library.DataBaseModels;
+﻿using BuildManager.Library.DatabaseModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EntityState = Microsoft.EntityFrameworkCore.EntityState;

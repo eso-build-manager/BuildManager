@@ -43,7 +43,7 @@
 //    public static void GenerateRestUrls(List<string> abioClasses)
 //    {
 //        StringBuilder stringBuilder = new StringBuilder();
-//        string header = "using System;\r\nusing System.Collections.Generic;\r\nusing System.Linq;\r\nusing System.Text;\r\nusing System.Threading.Tasks;\r\nusing System.Net.Http;\r\n\r\nnamespace Buildmanager.Library.Services\r\n{\r\n    internal class Constants\r\n    {        \r\n        private static HttpClient client = new HttpClient();\r\n        public static HttpClient GetClient()\r\n        {\r\n            return client;\r\n        }\r\n        public static string RestUrl = \"http://localhost:5096/api/\";";
+//        string header = "using System;\r\nusing System.Collections.Generic;\r\nusing System.Linq;\r\nusing System.Text;\r\nusing System.Threading.Tasks;\r\nusing System.Net.Http;\r\n\r\nnamespace Buildmanager.Library.Services\r\n{\r\n    internal class Constants\r\n    {        \r\n        private static HttpClient client = new HttpClient();\r\n        public static HttpClient GetClient()\r\n        {\r\n            return client;\r\n        }\r\n        public static string RestUrl = \"http://localhost:5083/api/\";";
 //        string footer = "\t}\r\n}";
 //        stringBuilder.AppendLine(header).AppendLine();
 //        foreach (var abioClass in abioClasses)
