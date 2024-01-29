@@ -89,7 +89,7 @@ namespace Buildmanager.Library.Services
 		{
 			try
 			{
-                string jsonChore = JsonConvert.SerializeObject(Skill);
+				string jsonChore = JsonConvert.SerializeObject(Skill);
                 StringContent httpContent = new StringContent(jsonChore, Encoding.UTF8, "application/json");
                 HttpResponseMessage result = await Constants.GetClient().PostAsync(Constants.SkillUrl, httpContent);
                 return result;
