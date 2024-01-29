@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BuildManager.Library.DataBaseModels;
+namespace BuildManager.Library.DatabaseModels;
 
 public partial class SetUsableItemSlots
 {

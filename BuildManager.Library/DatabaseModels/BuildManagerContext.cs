@@ -2,9 +2,10 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using BuildManager.Library.DatabaseModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace BuildManager.Library.DataBaseModels;
+namespace BuildManager.Library.DatabaseModels;
 
 public partial class BuildManagerContext : DbContext
 {
@@ -18,13 +19,15 @@ public partial class BuildManagerContext : DbContext
 
     public virtual DbSet<SetUsableItemSlots> SetUsableItemSlots { get; set; }
 
+    public virtual DbSet<Skill> Skill { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<SetList>(entity =>
         {
             entity.HasKey(e => e.SetId);
 
-            entity.ToTable("SetList", "Set");
+            entity.ToTable("SetList");
 
             entity.Property(e => e.SetId).ValueGeneratedNever();
             entity.Property(e => e.SetBonusDescription).IsUnicode(false);
@@ -44,13 +47,18 @@ public partial class BuildManagerContext : DbContext
         {
             entity.HasKey(e => e.SetUsableItemSlotsId);
 
-            entity.ToTable("SetUsableItemSlots", "Set");
+            entity.ToTable("SetUsableItemSlots");
 
             entity.HasOne(d => d.Set).WithMany(p => p.SetUsableItemSlots)
                 .HasForeignKey(d => d.SetId)
                 .HasConstraintName("FK__SetUsable__SetId__3C69FB99");
         });
 
+        modelBuilder.Entity<Skill>(entity =>
+        {
+            entity.HasKey(e => e.SkillId);
+            entity.ToTable("Skill");
+        });
         OnModelCreatingPartial(modelBuilder);
     }
 
