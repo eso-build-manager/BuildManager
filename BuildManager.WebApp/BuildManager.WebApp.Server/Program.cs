@@ -2,7 +2,7 @@ using BuildManager.Library.DatabaseModels;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddCors();
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -15,16 +15,21 @@ builder.Services.AddDbContext<BuildManagerContext>(
 builder.Services.AddSqlite<BuildManagerContext>(builder.Configuration.GetConnectionString("DefaultConnection"));
 var app = builder.Build();
 
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
+    await next.Invoke();
+});
+
 app.UseDefaultFiles();
 app.UseStaticFiles();
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

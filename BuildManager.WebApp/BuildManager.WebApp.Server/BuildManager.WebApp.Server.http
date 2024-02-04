@@ -1,6 +1,6 @@
 @BuildManager.WebApp.Server_HostAddress = http://localhost:5083
 
-GET {{BuildManager.WebApp.Server_HostAddress}}/weatherforecast/
+GET {{BuildManager.WebApp.Server_HostAddress}}/api/setlist/
 Accept: application/json
 
 ###

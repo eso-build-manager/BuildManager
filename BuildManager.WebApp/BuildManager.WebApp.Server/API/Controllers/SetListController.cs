@@ -1,4 +1,5 @@
 ﻿using BuildManager.Library.DatabaseModels;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -17,7 +18,8 @@ namespace BuildManager.WebApp.Server.API.Controllers
                 _context = context;
             }
 
-            // GET: api/SetLists
+        // GET: api/SetLists
+            [EnableCors]
             [HttpGet]
             public async Task<ActionResult<IEnumerable<SetList>>> GetSetList()
             {
